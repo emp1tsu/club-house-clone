@@ -17,7 +17,7 @@ export function createRoom(id, data) {
     .doc(id)
     .set({
       created: firebase.firestore.FieldValue.serverTimestamp(),
-      lastPing: firebase.firestore.FieldPath.serverTimestamp(),
+      lastPing: firebase.firestore.FieldValue.serverTimestamp(),
       users: 1,
       ...data,
     });
